@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/packages/table-tasks",
+    "rootDir": "../..",
+    "composite": true,
+    "declaration": true,
+    "types": []
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "../progress-with-hover-and-reset/src/**/*.ts", "../progress-with-hover-and-reset/src/**/*.tsx"],
+  "exclude": ["src/**/*.test.tsx", "src/**/*.test.ts", "src/**/*.stories.tsx"]
+}

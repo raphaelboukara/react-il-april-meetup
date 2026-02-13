@@ -1,0 +1,23 @@
+{
+  "name": "table-tasks-with-data",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/table-tasks-with-data/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/table-tasks-with-data"
+      }
+    },
+    "test:browser": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest",
+        "cwd": "packages/table-tasks-with-data"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/packages/table-tasks",
+    "rootDir": "../..",
+    "types": ["vitest/globals"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "../progress-with-hover-and-reset/src/**/*.ts", "../progress-with-hover-and-reset/src/**/*.tsx"],
+  "references": [
+    { "path": "./tsconfig.lib.json" }
+  ]
+}

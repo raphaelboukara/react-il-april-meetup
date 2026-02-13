@@ -1,0 +1,44 @@
+{
+  "name": "progress-with-hover",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/progress-with-hover/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/progress-with-hover"
+      }
+    },
+    "test:browser": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest",
+        "cwd": "packages/progress-with-hover"
+      }
+    },
+    "test:unit": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest run --config vitest.unit.config.ts",
+        "cwd": "packages/progress-with-hover"
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "storybook dev -p 6008",
+        "cwd": "packages/progress-with-hover"
+      }
+    },
+    "build-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "storybook build",
+        "cwd": "packages/progress-with-hover"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "progress-with-hover-and-reset",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/progress-with-hover-and-reset/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/progress-with-hover-and-reset"
+      }
+    },
+    "test:browser": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest",
+        "cwd": "packages/progress-with-hover-and-reset"
+      }
+    },
+    "test:unit": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest run --config vitest.unit.config.ts",
+        "cwd": "packages/progress-with-hover-and-reset"
+      }
+    },
+    "storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "storybook dev -p 6010",
+        "cwd": "packages/progress-with-hover-and-reset"
+      }
+    },
+    "build-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "storybook build",
+        "cwd": "packages/progress-with-hover-and-reset"
+      }
+    }
+  }
+}
